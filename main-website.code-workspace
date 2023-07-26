@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "main-website-1",
+			"path": "../main-website-1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
