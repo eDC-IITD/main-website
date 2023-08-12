@@ -2085,7 +2085,16 @@ For devices with smaller width like mobile phone
     display: none;
   }
 }
-
+@media all and (max-width: 768px) {
+  .blogs {
+    height: auto;
+    width: max(50%, 300px);
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+}
 /*
 
 for tabs and large phones
@@ -2374,15 +2383,6 @@ for tabs and large phones
     transition: all 0.4s ease;
   }
 
-  .blogs {
-    height: auto;
-    width: 75%;
-    margin: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    position: relative;
-  }
-
   .blogs .img {
     height: 60%;
     width: 100%;
@@ -2435,32 +2435,50 @@ for tabs and large phones
   }
 
   .blog-text {
-    height: auto;
+    height: 240px;
     width: 100%;
     text-align: center;
     vertical-align: center;
     font-family: poppins;
     color: whitesmoke;
     background-color: #050505;
-    padding: 10px;
+    padding: 0 10px;
     transition: all 0.5s ease;
   }
 
   .blog-text h3 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 200;
-    height: 15%;
-    padding: 10px;
+    /* height: 15%; */
+    padding: 5px 10px;
     letter-spacing: 1px;
   }
 
   .blog-text p {
     font-size: 17px;
     opacity: 0.9;
+    height: 140px;
     font-weight: 200;
-    height: 85%;
     padding: 20px;
-    letter-spacing: 1px;
+    overflow-y: scroll;
+  }
+  .blog-text p::-webkit-scrollbar {
+    width: 2px;
+    color: #c70039;
+    transition: all 0.4s ease;
+  }
+
+  .blog-text p::-webkit-scrollbar-thumb {
+    background: #c70039;
+    border-radius: 2px;
+    width: 2px;
+    transition: all 0.4s ease;
+  }
+
+  .blog-text p::-webkit-scrollbar-track {
+    background: #101010;
+    border-radius: 2px;
+    width: 2px;
   }
 
   .blogs:hover .img {
