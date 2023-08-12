@@ -1079,11 +1079,18 @@ button:hover .index {
   height: auto;
 }
 
+.blog-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
 .blog-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  max-width: 1450px;
 }
 
 .blogs {
