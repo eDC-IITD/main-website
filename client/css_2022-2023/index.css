@@ -101,20 +101,14 @@ body {
     justify-content: center;
 }
 
-
 #navigation-bar {
     position: fixed;
     height: 100px;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     padding: 10px;
     background: transparent;
     overflow: hidden;
-}
-@media (min-width){
-    #navigation-bar{
-        display: none;
-    }
 }
 
 .menubar {
@@ -3085,69 +3079,7 @@ for tabs and large phones
     min-height: 100vh;
   }
   
-@keyframes spin {
+  @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-.navbarx {
-    background-color: transparent; /* Set the background to transparent */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: -1;
-    padding: 10px 20px;
-     /* Add a light shadow */
-}
-
-.logox img {
-    width: 80px; /* Adjust the width as needed */
-    height: auto;
-    margin-right: 10px; /* Decrease the margin to adjust spacing */
-}
-
-.nav-listx {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-itemx {
-    margin: 0 90px;
-    margin-left: 20px; /* Increase the left margin to adjust spacing */
-}
-
-.nav-itemx:first-child {
-    margin-left: 0; /* Reset left margin for the first item */
-}
-
-.nav-itemx a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font */
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-weight: bold; /* Add font weight for emphasis */
-    font-size: 16px; /* Adjust font size as needed */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a light text shadow */
-}
-
-.nav-itemx a:hover {
-    color: #e83e8c; /* Your desired hover color */
-}
-@media (max-width: 991px) {
-    /* ... (same media query styles as before) ... */
-    .display-hidden-on-mobile{
-        display: none;
-    }
-}
-@media (min-width: 991px) {
-    /* ... (same media query styles as before) ... */
-    .display-hidden-on-laptop{
-        display: none !important;
-    }
-}
