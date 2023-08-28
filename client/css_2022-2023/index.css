@@ -1089,7 +1089,7 @@ button:hover .index {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   max-width: 1450px;
 }
 
@@ -1100,6 +1100,8 @@ button:hover .index {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  flex-grow: 0;    /* Prevents the item from growing */
+  flex-shrink: 1;
 }
 
 .blogs .img {
@@ -1168,7 +1170,7 @@ button:hover .index {
 }
 
 .blog-text h3 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
   height: 20%;
   padding: 20px;
@@ -1389,6 +1391,16 @@ form button:hover {
 
 .contact-info-icon-text p {
   font-size: 14px;
+  opacity: 0.7;
+}
+
+.contact-info-icon-text a {
+  color: white;
+  opacity: 0.7;
+}
+
+contact-info-icon-text a:visited {
+  color: white;
   opacity: 0.7;
 }
 
@@ -2759,7 +2771,7 @@ for tabs and large phones
   .blogs {
     height: 420px;
     width: 30%;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
@@ -2830,14 +2842,16 @@ for tabs and large phones
   }
 
   .blog-text h3 {
-    font-size: 28px;
+    font-size: 020px;
     font-weight: 500;
-    height: 20%;
+    height: 25%;
     letter-spacing: 1px;
-  }
+    padding-bottom: 2rem;
+}
 
   .blog-text p {
     font-size: 18px;
+    /* overflow-y: auto; */
     opacity: 0.9;
     font-weight: 400;
     height: 60%;
