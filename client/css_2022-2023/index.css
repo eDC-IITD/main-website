@@ -1093,6 +1093,12 @@ button:hover .index {
   max-width: 1450px;
 }
 
+@media (max-width : 551px) {
+  .blog-content{
+    justify-content: center;
+  }
+}
+
 .blogs {
   height: 420px;
   width: 40%;
@@ -3162,4 +3168,35 @@ min-height: 100vh;
 
 .nav-itemx a:hover {
     color: #e83e8c; /* Your desired hover color */
+}
+
+
+.blog-paragrah{
+  text-align: justify;
+  color: aliceblue;
+  font-size: 18px;
+  padding: 5rem;
+  padding-left: 16rem;
+  padding-right: 16rem; 
+  font-family: poppins;
+}
+
+.blog-paragrah-link{
+  text-decoration: underline;
+  color: white;
+}
+
+@media (max-width : 1200px){
+  .blog-paragrah{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (max-width : 768px){
+  .blog-paragrah{
+    padding : 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+  }
 }
