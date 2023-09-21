@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="With an aim to strive towards promoting entrepreneurship, we at eDC IIT Delhi are a group of enthusiasts working continuously to provide a platform to foster, inspire and help the young aspiring students open the door of the promising & exciting world of entrepreneurship." />
-    <meta name="keywords"
-        content="eDC, IIT Delhi, Entrepreneurship Development Cell, IIT , IITD, Entrepreneurship, Entrepreneur" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="With an aim to strive towards promoting entrepreneurship, we at eDC IIT Delhi are a group of enthusiasts working continuously to provide a platform to foster, inspire and help the young aspiring students open the door of the promising & exciting world of entrepreneurship."
+    />
+    <meta
+      name="keywords"
+      content="eDC, IIT Delhi, Entrepreneurship Development Cell, IIT , IITD, Entrepreneurship, Entrepreneur"
+    />
     <meta name="author" content="Saurabh Tiwari" />
     <title>eDC IIT Delhi</title>
     <!--favicon-img-->
-    <link rel="icon" type="image/png" href="images_2022-2023/favicon.ico">
+    <link rel="icon" type="image/png" href="images_2022-2023/favicon.ico" />
     <!--favicon-img-->
     <!--main css file should not be removed -->
-    <link rel="stylesheet" href="css_2022-2023/index.css">
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css_2022-2023/index.css" />
 
-<body>
+  </head>
+
+  <body>
     <!--contains all the div-->
     <div id="all">
-        <!--mouse  follower-->
-        <div class="cursor"></div>
-        <!--mouse  follower-->
-        
-        <!--loader-->
-        <div id="loader">
-            <span class="color">eDC</span>IIT Delhi
-        </div>
-        <!--loader-end-->
+
+      <!--loader-->
+      <div id="loader"><span class="color">eDC</span>IIT Delhi</div>
+      <!--loader-end-->
+
+      <!--Main-Section-->
        
         <!--Main-Section-->
         <!--Navigator-fullscreen-->
-        <div id="navigation-content">
+        <div id="navigation-content" class= "display-hidden-on-laptop">
             <div class="logo">
                 <img src="images_2022-2023/eDCLogo.png" alt="logo">
             </div>
@@ -46,15 +48,40 @@
                 <a href="index.html" data-text="HOME" id="home-link">HOME</a>
                 <a href="about.html" data-text="ABOUT" id="about-link">ABOUT</a>
                 <a href="events.html" data-text="EVENTS" id="blog-link">EVENTS</a>
+                <a href="./team" data-text="EVENTS" id="blog-link">TEAM</a>
                 <a href="gallery.html" data-text="GALLERY" id="portfolio-link">GALLERY</a>
-                <a href="blogs.html" data-text="BLOGS" id="blogs-menu">BLOGS</a>
+                <a href="blog/" data-text="BLOGS" id="blogs-menu">BLOGS</a>
                 <a href="contact.html" data-text="CONTACT" id="contact-link">CONTACT</a>
             </div>
         </div>
         <!--Navigator-Fullscreen END-->
+
+
+                <!--Nav bar start-->
+        <div class="navbarx-container">
+          <nav class="navbarx display-hidden-on-mobile">
+              <div class="logox display-hidden-on-mobile">
+                  <img src="./images_2022-2023/eDCLogo.png" alt="Logo">
+              </div>
+              <div class="nav-listx display-hidden-on-mobile">
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="index.html">Home</a></div>
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="about.html">About</a></div>
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="events.html">Events</a></div>
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="./team/">Team</a></div>
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="gallery.html">Gallery</a></div>
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="blog/">Blogs</a></div>
+                  <div class="nav-itemx display-hidden-on-mobile"><a href="contact.html">Contact</a></div>
+              </div>
+          </nav>
+      </div>
+        <!--nav bar end-->
+
+
+
+
         <!--Home Page-->
         <!--Menubar-->
-        <div id="navigation-bar">
+        <div id="navigation-bar" class="display-hidden-on-laptop">
             <img src="images_2022-2023/eDCLogo.png" alt="logo">
             <div class="menubar">
                 <span class="first-span"></span>
@@ -62,59 +89,68 @@
                 <span class="third-span"></span>
             </div>
         </div>
-        <!--Menubar End-->
-        <!--Header-->
-        <div id="header">
-            <div id="particles"></div>
-            <!--Social Media Links-->
-            <div class="social-media-links">
-                <a href="https://www.instagram.com/edc_iitd/?hl=en"><img src="images_2022-2023/instagram logo.png"
-                        class="social-media" alt="instagram-logo"></a>
-                <!--Your instagram homepage link inser in place of "#"-->
-                <a href="https://www.facebook.com/edciitdelhi/posts"><img src="images_2022-2023/facebook logo.png"
-                        class="social-media" alt="facebook-logo"></a>
-                <a href="https://in.linkedin.com/company/edc-iit-delhi"><img src="images_2022-2023/linkedin logo.png"
-                        class="social-media" alt="linkedin-logo"></a>
-                <a href="https://twitter.com/edciitdelhi"><img src="images_2022-2023/twitter logo.png"
-                        class="social-media" alt="twitter-logo"></a>
+      </div>
+      <!--Menubar End-->
+      <!--Header-->
+      <div id="header">
 
+        <div class="header-content">
+          <div class="header-content-box">
+            <div class="firstline">
+              <span class="color">eDC </span>IIT Delhi
             </div>
-            <!--Social Media Links end-->
-            <div class="header-content">
-                <div class="header-content-box">
-                    <div class="firstline"><span class="color">eDC </span>IIT Delhi</div>
-                    <div class="secondline">
-                        We
-                        <span class="txt-rotate color" data-period="1200"
-                            data-rotate='[ " Ideate. ", " Innovate.", " Incubate." ]'></span>
-                        <span class="slash">|</span>
-                    </div>
-                    <div class="contact">
-                        <a href="Mailto:edciitd.team@gmail.com"><img src="images_2022-2023/mail.png" alt="email-pic"
-                                class="contactpic"></a>
-                        <!--Your email Id write in place of "#"-->
-                        <a href="Tel:+918208183937"><img src="images_2022-2023/call.png" alt="phone-pic"
-                                class="contactpic"></a>
-                        <!--Your telephone number Id write in place of "#"-->
-                    </div>
-                </div>
+            <div class="secondline">
+              We
+              <span
+                class="txt-rotate color"
+                data-period="1200"
+                data-rotate='[ " Ideate. ", " Innovate.", " Incubate." ]'
+              ></span>
+              <span class="slash">|</span>
             </div>
+          </div>
         </div>
-        <!--Header End-->
-        <!--HomePage End-->
-        <!--Main-Section End-->
-
+      </div>
+      <!--Header End-->
+      <!--HomePage End-->
+      <!--Social Media Links-->
+      <div class="social-media-links" style="z-index: 1;">
+        <a href="https://www.instagram.com/edc_iitd/?hl=en"
+          ><img
+            src="images_2022-2023/instagram logo.png"
+            class="social-media"
+            alt="instagram-logo"
+        /></a>
+        <!--Your instagram homepage link inser in place of "#"-->
+        <a href="https://www.facebook.com/edciitdelhi/posts"
+          ><img
+            src="images_2022-2023/facebook logo.png"
+            class="social-media"
+            alt="facebook-logo"
+        /></a>
+        <a href="https://in.linkedin.com/company/edc-iit-delhi"
+          ><img
+            src="images_2022-2023/linkedin logo.png"
+            class="social-media"
+            alt="linkedin-logo"
+        /></a>
+        <a href="https://twitter.com/edciitdelhi"
+          ><img
+            src="images_2022-2023/twitter logo.png"
+            class="social-media"
+            alt="twitter-logo"
+        /></a>
+      </div>
+      <!--Social Media Links end-->
+      <!--Main-Section End-->
     </div>
     <!--all the divisions-->
     <script src="js_2022-2023/jquery.min.js"></script>
-    <script src="js_2022-2023/particles.js"></script>
-    <script src="js_2022-2023/particles.min.js"></script>
+    <!-- <script src="js_2022-2023/particles.js"></script>
+    <script src="js_2022-2023/particles.min.js"></script> -->
     <script src="js_2022-2023/index.js"></script>
     <!--particles script-->
-    <script>
-        particlesJS("particles", { "particles": { "number": { "value": 60, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#fff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 7, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": false, "distance": 500, "color": "#ffffff", "opacity": 0.4, "width": 2 }, "move": { "enable": true, "speed": 3, "direction": "bottom", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 0.5 } }, "bubble": { "distance": 400, "size": 4, "duration": 0.3, "opacity": 1, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
-    </script>
 
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
