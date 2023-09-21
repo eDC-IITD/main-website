@@ -16,8 +16,6 @@ contactForm.addEventListener("submit", async (e) => {
 
   const url = `http://localhost:3000/?name=${name}&email=${email}&subject=${subject}&message=${message}`;
   try {
-    // @todo error verification and handling for axios
-    // @todo error display over the form
     axios
       .post(url, {
         mode: "no-cors",
