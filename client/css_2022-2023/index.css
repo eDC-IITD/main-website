@@ -71,7 +71,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  animation: scale 1.5s ease;
+  /* animation: scale 1.5s ease; */
   position: relative;
   display: block;
 }
@@ -1089,8 +1089,14 @@ button:hover .index {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   max-width: 1450px;
+}
+
+@media (max-width : 551px) {
+  .blog-content{
+    justify-content: center;
+  }
 }
 
 .blogs {
@@ -1100,6 +1106,8 @@ button:hover .index {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  flex-grow: 0;    /* Prevents the item from growing */
+  flex-shrink: 1;
 }
 
 .blogs .img {
@@ -1168,7 +1176,7 @@ button:hover .index {
 }
 
 .blog-text h3 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
   height: 20%;
   padding: 20px;
@@ -1373,7 +1381,7 @@ form button:hover {
   flex-direction: row;
   align-items: center;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .contact-info-icon-text {
@@ -1389,6 +1397,16 @@ form button:hover {
 
 .contact-info-icon-text p {
   font-size: 14px;
+  opacity: 0.7;
+}
+
+.contact-info-icon-text a {
+  color: white;
+  opacity: 0.7;
+}
+
+contact-info-icon-text a:visited {
+  color: white;
   opacity: 0.7;
 }
 
@@ -2637,14 +2655,15 @@ for tabs and large phones
 
   .contect-info-content-line {
     height: auto;
-    padding: 10px;
+    /* padding: 10px; */
+    font-size: 10px;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: left;
-    margin-left: 30%;
+    margin-left: 10%;
   }
 
   .hire-me-section {
@@ -2759,7 +2778,7 @@ for tabs and large phones
   .blogs {
     height: 420px;
     width: 30%;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
@@ -2830,14 +2849,16 @@ for tabs and large phones
   }
 
   .blog-text h3 {
-    font-size: 28px;
+    font-size: 020px;
     font-weight: 500;
-    height: 20%;
+    height: 25%;
     letter-spacing: 1px;
-  }
+    padding-bottom: 2rem;
+}
 
   .blog-text p {
     font-size: 18px;
+    /* overflow-y: auto; */
     opacity: 0.9;
     font-weight: 400;
     height: 60%;
@@ -3148,4 +3169,36 @@ min-height: 100vh;
 
 .nav-itemx a:hover {
     color: #e83e8c; /* Your desired hover color */
+}
+
+
+.blog-paragrah{
+  text-align: justify;
+  color: aliceblue;
+  font-size: 18px;
+  padding: 5rem;
+  padding-left: 16rem;
+  padding-right: 16rem; 
+  font-family: poppins;
+}
+
+.blog-paragrah-link{
+  text-decoration: underline;
+  color: white;
+  text-overflow: wrap;
+}
+
+@media (max-width : 1200px){
+  .blog-paragrah{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (max-width : 768px){
+  .blog-paragrah{
+    padding : 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+  }
 }
