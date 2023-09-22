@@ -3185,6 +3185,7 @@ min-height: 100vh;
 .blog-paragrah-link{
   text-decoration: underline;
   color: white;
+  text-overflow: wrap;
 }
 
 @media (max-width : 1200px){
