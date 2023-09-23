@@ -140,7 +140,8 @@ app.use(cors());
 app.post("/contact", async (req, res) => {
 
   // authorization for request --> accepted only local host (developmental purpose) || edciitd.ac.in
-  if (req.hostname == "localhost" || "edciitd.ac.in") {
+  if (req.hostname == "localhost" || "edciitd.com") {
+    conole.log("contact request approved")
 
     if (req.query.name && req.query.email && req.query.subject && req.query.message) {
 
@@ -175,13 +176,15 @@ app.post("/contact", async (req, res) => {
       res.json("insufficient query parameters");
     }
   } else {
+    console.log("request  disapproved")
     res.status(403);
     res.json("Not allowed");
   }
 });
 app.post("/newsletter", async (req, res) => {
   // authorization for request --> accepted only local host (developmental purpose) || edciitd.ac.in
-  if (req.hostname == "localhost" || "edciitd.ac.in") {
+  if (req.hostname == "localhost" || "edciitd.com") {
+    console.log("request approved")
     if (req.query.email) {
       var email = req.query.email;
       try { //try updating sheets
@@ -189,6 +192,7 @@ app.post("/newsletter", async (req, res) => {
           console.log(e)
           throw e
         })
+        console.log("updated newsletter sheets")
         res.status(200);
         res.json("success");
       } catch (error) {
