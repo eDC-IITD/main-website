@@ -22,8 +22,8 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
-const TOKEN_PATH = path.join(process.cwd(), 'client/api/contact_us/token.json');
-const CREDENTIALS_PATH = path.join(process.cwd(), 'client/api/contact_us/credentials.json');
+const TOKEN_PATH = path.join(process.cwd(), 'api/token.json');
+const CREDENTIALS_PATH = path.join(process.cwd(), 'api/credentials.json');
 
 /**
  * Reads previously authorized credentials from the save file.
@@ -33,6 +33,7 @@ const CREDENTIALS_PATH = path.join(process.cwd(), 'client/api/contact_us/credent
 async function loadSavedCredentialsIfExist() {
   try {
     const content = await fs.readFile(TOKEN_PATH);
+
     const credentials = JSON.parse(content);
     return google.auth.fromJSON(credentials);
   } catch (err) {
@@ -81,10 +82,10 @@ async function authorize() {
 // end of google authentication code -------------------------------------
 
 // update google sheets ---------------------------------------------------
-async function updateSheets(name, email, subject, message) {
+async function updateContactUsSheets(name, email, subject, message) {
   let sheets = google.sheets({ version: 'v4', auth: await authorize() });
   sheets.spreadsheets.values.append({
-    spreadsheetId: process.env.SPREAD_SHEET_ID,
+    spreadsheetId: process.env.CONTACT_US_SPREAD_SHEET_ID,
     range: "Sheet1!A1:D1000",
     valueInputOption: "RAW",
     resource: {
@@ -92,7 +93,17 @@ async function updateSheets(name, email, subject, message) {
     }
   });
 }
-
+async function updateNewsletterSheets(email) {
+  let sheets = google.sheets({ version: 'v4', auth: await authorize() });
+  sheets.spreadsheets.values.append({
+    spreadsheetId: process.env.NEWS_LETTER_SPREAD_SHEET_ID,
+    range: "Sheet1!A1:D1000",
+    valueInputOption: "RAW",
+    resource: {
+      values: [[name, email, subject, message],],
+    }
+  });
+}
 // initiating node mailer for sending emails ---------------------------------
 const transport = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -107,11 +118,9 @@ function sendMail(targetEmail, targetName) {
     from: process.env.MAILER_ID,
     to: targetEmail,
     subject:
-      "Thankyou for reaching out us, Entreprenuership Development Cell IIT Delhi",
+      "Thank you for reaching out to the Entrepreneurship Development Cell, IIT Delhi",
     html: `
-      Dear ${targetName},<br><br>
-      You will hear from us,with in 2-3 days.<br><br>
-      eDC IIT Delhi<br>
+    Dear ${targetName},<br><br> Thank you for contacting the Entrepreneurship Development Cell at IIT Delhi. We appreciate your interest and inquiry.<br><br> Our team is dedicated to supporting and promoting entrepreneurship, and we are delighted that you've taken the first step to connect with us.<br><br> Rest assured, we have received your message, and one of our team members will get back to you within a week. In the meantime.<br><br> We look forward to assisting you in your entrepreneurial journey.<br><br> Best regards,<br> Entrepreneurship Development Cell<br> Indian Institute of Technology (IIT) Delhi<br>
  `,
   };
   var status = transport.sendMail(mailOptions, function (error, info) {
@@ -128,7 +137,7 @@ function sendMail(targetEmail, targetName) {
 // start of express server code ---------------------------------------------
 app.use(express.json());
 app.use(cors());
-app.post("/", async (req, res) => {
+app.post("/contact", async (req, res) => {
 
   // authorization for request --> accepted only local host (developmental purpose) || edciitd.ac.in
   if (req.hostname == "localhost" || "edciitd.ac.in") {
@@ -140,10 +149,10 @@ app.post("/", async (req, res) => {
       email = req.query.email;
       subject = req.query.subject;
       message = req.query.message;
-      encErrors = [] // error codes are the fitst alphabet of function selector mapping to numbers
+      encErrors = [] // error codes are the first alphabet of function selector mapping to numbers
 
       try { //try updating sheets
-        await updateSheets(name, email, subject, message).catch(e => {
+        await updateContactUsSheets(name, email, subject, message).catch(e => {
           console.log(e)
           throw e
         })
@@ -170,7 +179,32 @@ app.post("/", async (req, res) => {
     res.json("Not allowed");
   }
 });
-
+app.post("/newsletter", async (req, res) => {
+  // authorization for request --> accepted only local host (developmental purpose) || edciitd.ac.in
+  if (req.hostname == "localhost" || "edciitd.ac.in") {
+    if (req.query.email) {
+      var email = req.query.email;
+      try { //try updating sheets
+        await updateNewsletterSheets(email).catch(e => {
+          console.log(e)
+          throw e
+        })
+        res.status(200);
+        res.json("success");
+      } catch (error) {
+        res.status(400);
+        res.json("failed to update sheets")
+        console.log(error);
+      }
+    } else {
+      res.status(417);
+      res.json("insufficient query parameters");
+    }
+  } else {
+    res.status(403);
+    res.json("Not allowed");
+  }
+})
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

@@ -14,7 +14,7 @@ contactForm.addEventListener("submit", async (e) => {
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("body").value;
 
-  const url = `http://localhost:3000/?name=${name}&email=${email}&subject=${subject}&message=${message}`;
+  const url = `http://localhost:3000/contact?name=${name}&email=${email}&subject=${subject}&message=${message}`;
   try {
     axios
       .post(url, {
