@@ -141,9 +141,10 @@ app.post("/contact", async (req, res) => {
 
   // authorization for request --> accepted only local host (developmental purpose) || edciitd.ac.in
   if (req.hostname == "localhost" || "edciitd.com") {
-    conole.log("contact request approved")
+    console.log("connected from approved url")
 
     if (req.query.name && req.query.email && req.query.subject && req.query.message) {
+      console.log("request approved")
 
       var name, email, subject, message, encErrors;
       name = req.query.name;
@@ -159,6 +160,7 @@ app.post("/contact", async (req, res) => {
         })
       } catch (error) {
         encErrors.push(21)
+        console.log("could not connect with sheets")
         console.log(error);
       }
 
