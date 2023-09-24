@@ -15,8 +15,6 @@ body {
   }
 
   .team-member {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     background: rgb(2, 0, 36);
     padding: 20px;
@@ -29,7 +27,7 @@ body {
     border-radius: 40px 5px 2px 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 2.2vw 0.1vw 2.2vw 0.1vw;
-    width: max(30%, 300px);
+    width: max(40%, 400px);
     transition: transform 1s, border-radius 1s, background-color 1s,
       background 1s;
   }

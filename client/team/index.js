@@ -1,4 +1,4 @@
-const teamData = [
+const profData = [
     {
       "firstname": "Laxmi",
       "lastname": "Narayan Subramaniam",
@@ -6,7 +6,8 @@ const teamData = [
       "contact_email": "rlnarayan@mse.iitd.ac.in",
       "linkedin": "https://www.linkedin.com/in/lakshmi-narayan-ramasubramanian-7350899/?originalSubdomain=in",
       "profile_pic": "https://i.ibb.co/ncwycRG/LNR.jpg"
-    },
+    }]
+const leads = [
     {
       "firstname": "Sameer",
       "lastname": "Akhtar",
@@ -28,8 +29,8 @@ const teamData = [
       "instagram": "https://instagram.com/aaditya72?igshid=OGQ5ZDc2ODk2ZA==",
       "twitter": "",
       "profile_pic": "https://i.ibb.co/VSHJXk8/AADITYA.jpg"
-    },
-    {
+    }]
+const ctm=[    {
       "firstname": "Amar",
       "lastname": "Dixit",
       "post": "OG Mentor",
@@ -58,8 +59,8 @@ const teamData = [
       "instagram": "",
       "twitter": "",
       "profile_pic": "https://i.ibb.co/d47TsVY/Vaishali.jpg"
-    },
-    {
+    }]
+const coordis=[{
       "firstname": "Ashish",
       "lastname": "Arora",
       "post": "Tech Coordinator",
@@ -261,8 +262,8 @@ const teamData = [
     }
 ]
 
-
-document.querySelector("#team-page").innerHTML = teamData.map((member) => `
+document.querySelector("#prof").innerHTML = profData.map((member) => `
+<div class="col text-center d-flex align-items-center justify-content-center">
     <div class="team-member">
     <img src="${member.profile_pic}" alt="${member.firstname} ${member.lastname}">
     <h2>${member.firstname} ${member.lastname}</h2>
@@ -273,9 +274,53 @@ document.querySelector("#team-page").innerHTML = teamData.map((member) => `
     + ((member.linkedin) ?  `<p><a href="${member.linkedin}" target="_blank" style="text-decoration:none"><ion-icon name="logo-linkedin"></ion-icon></a> &nbsp &nbsp` : ``)
     + ((member.twitter) ? `<a href="${member.twitter}" target="_blank" style="text-decoration:none"><ion-icon name="logo-twitter"></ion-icon></a>&nbsp &nbsp ` : ``)
     + ((member.instagram) ? `<a href="${member.instagram}" target="_blank" style="text-decoration:none"><ion-icon name="logo-instagram"></ion-icon></a></p>` : ``)
-    + `</div></div>`
+    + `</div></div></div>`
 ).join("");
 
+document.querySelector("#leads").innerHTML = leads.map((member) => `
+<div class="col text-center d-flex align-items-center justify-content-center offset-1">
+    <div class="team-member">
+    <img src="${member.profile_pic}" alt="${member.firstname} ${member.lastname}">
+    <h2>${member.firstname} ${member.lastname}</h2>
+    <p id="postnew">${member.post}</p>
+    <div class="contact">
+        <a href=mailto:"${member.contact_email}" style="text-decoration:none;margin-bottom:5px;">Email: ${member.contact_email}</a>
+        <br>`
+    + ((member.linkedin) ?  `<p><a href="${member.linkedin}" target="_blank" style="text-decoration:none"><ion-icon name="logo-linkedin"></ion-icon></a> &nbsp &nbsp` : ``)
+    + ((member.twitter) ? `<a href="${member.twitter}" target="_blank" style="text-decoration:none"><ion-icon name="logo-twitter"></ion-icon></a>&nbsp &nbsp ` : ``)
+    + ((member.instagram) ? `<a href="${member.instagram}" target="_blank" style="text-decoration:none"><ion-icon name="logo-instagram"></ion-icon></a></p>` : ``)
+    + `</div></div></div>`
+).join("");
+
+document.querySelector("#ctm").innerHTML = ctm.map((member) => `
+<div class="col text-center d-flex align-items-center justify-content-center">
+    <div class="team-member">
+    <img src="${member.profile_pic}" alt="${member.firstname} ${member.lastname}">
+    <h2>${member.firstname} ${member.lastname}</h2>
+    <p id="postnew">${member.post}</p>
+    <div class="contact">
+        <a href=mailto:"${member.contact_email}" style="text-decoration:none;margin-bottom:5px;">Email: ${member.contact_email}</a>
+        <br>`
+    + ((member.linkedin) ?  `<p><a href="${member.linkedin}" target="_blank" style="text-decoration:none"><ion-icon name="logo-linkedin"></ion-icon></a> &nbsp &nbsp` : ``)
+    + ((member.twitter) ? `<a href="${member.twitter}" target="_blank" style="text-decoration:none"><ion-icon name="logo-twitter"></ion-icon></a>&nbsp &nbsp ` : ``)
+    + ((member.instagram) ? `<a href="${member.instagram}" target="_blank" style="text-decoration:none"><ion-icon name="logo-instagram"></ion-icon></a></p>` : ``)
+    + `</div></div></div>`
+).join("");
+
+document.querySelector("#coordis").innerHTML = coordis.map((member) => `
+<div class="col text-center d-flex align-items-center justify-content-center">
+    <div class="team-member">
+    <img src="${member.profile_pic}" alt="${member.firstname} ${member.lastname}">
+    <h2>${member.firstname} ${member.lastname}</h2>
+    <p id="postnew">${member.post}</p>
+    <div class="contact">
+        <a href=mailto:"${member.contact_email}" style="text-decoration:none;margin-bottom:5px;">Email: ${member.contact_email}</a>
+        <br>`
+    + ((member.linkedin) ?  `<p><a href="${member.linkedin}" target="_blank" style="text-decoration:none"><ion-icon name="logo-linkedin"></ion-icon></a> &nbsp &nbsp` : ``)
+    + ((member.twitter) ? `<a href="${member.twitter}" target="_blank" style="text-decoration:none"><ion-icon name="logo-twitter"></ion-icon></a>&nbsp &nbsp ` : ``)
+    + ((member.instagram) ? `<a href="${member.instagram}" target="_blank" style="text-decoration:none"><ion-icon name="logo-instagram"></ion-icon></a></p>` : ``)
+    + `</div></div></div>`
+).join("");
 
 
 window.addEventListener("scroll", function () {
