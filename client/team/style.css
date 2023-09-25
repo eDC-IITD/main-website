@@ -27,13 +27,13 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 2.2vw 0.1vw 2.2vw 0.1vw;
   width: max(27%, 270px);
-  transition: transform 0.7s, border-radius 0.7s, background-color 0.7s, background 0.7s, box-shoadow 0.5s;
+  transition: transform 0.7s, border-radius 0.7s, background-color 0.7s, box-shadow 0.5s;
 }
 
 .team-member:hover {
   border-radius: 2px 5px 40px 5px;
   box-shadow: 0 20px 25px #4d2934;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .team-member img {
