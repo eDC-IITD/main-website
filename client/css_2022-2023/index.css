@@ -3208,11 +3208,16 @@ min-height: 100vh;
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-#contact {
+/* #contact {
   padding: 60px 0;
 }
 #contact{
   background-color: transparent;
+} */
+#contact{
+background-color: #333; /* Dark background color */
+ /* Shadow effect */
+padding: 20px; /* Add some padding to improve visual appearance */
 }
 #contact .section-header{
   color: #89C4E1;
@@ -3271,4 +3276,109 @@ min-height: 100vh;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
   }
+}
+/* Newsletter Section
+--------------------------------*/
+/* #newsletter {
+  height: cover;
+  height: 200px;
+  background-color: rgb(55, 4, 55);
+} */
+#newsletter {
+  background-color: #333; /* Dark background color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Shadow effect */
+  padding: 20px; /* Add some padding to improve visual appearance */
+}
+
+#newsletter .overlay {
+  /* background: linear-gradient(rgba(240, 235, 235, 0.9) 0%, rgba(255, 255, 255, 0.2) 95%); */
+  height: 100%;
+  width: 100%;
+}
+
+#newsletter .form-control {
+  background-color: transparent;
+  border: 1px solid #965e5e;
+  border-radius: 0;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+  background: #cbcac9;
+}
+
+@media (max-width: 575px) {
+  #newsletter .form-control {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+#newsletter .form-control:focus {
+  border-color: #63a058;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+#newsletter .btn {
+  background: #75b657;
+  border: 0;
+  border-radius: 0;
+  height: 50px;
+  width: 30%;
+  transition: 0.3s;
+}
+
+@media (max-width: 575px) {
+  #newsletter .btn {
+    width: 100%;
+  }
+}
+
+#newsletter .btn:hover {
+  background: #187e25;
+}
+
+#newsletter .btn .fa {
+  padding-right: 10px;
+}
+
+#newsletter ul {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+#newsletter ul li {
+  background: #71c55d;
+  border-radius: 50px;
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 35px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newsletter ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newsletter ul li:hover {
+  background: #55b03f;
+}
+#newsletter h3{
+  color: #4c93c3;
+}
+#newsletter ul li i {
+  color: #3242a0;
+  line-height: 0;
 }
