@@ -109,7 +109,7 @@ const coordis = [
   {
     firstname: "Vinil",
     lastname: "Verma",
-    post: "Events Operation",
+    post: "Events Operation Coordinator",
     linkedin: "https://www.linkedin.com/in/vinil-verma-540604231",
     contact_email: "vinilverma@zwit.in",
     instagram: "https://www.instagram.com/vinil_verma/",
@@ -119,7 +119,7 @@ const coordis = [
   {
     firstname: "Suhani",
     lastname: "Agarwal",
-    post: "Events Operation",
+    post: "Events Operation Coordinator",
     linkedin: "https://www.linkedin.com/in/this-is-suhani",
     contact_email: "thisissuhaniagarwal@gmail.com",
     instagram: "https://instagram.com/this_is_suhani?igshid=MmIzYWVlNDQ5Yg==",
@@ -230,7 +230,7 @@ const coordis = [
   {
     firstname: "Kush",
     lastname: "Jain",
-    post: "Strategic Partnership",
+    post: "Strategic Partnership Coordinator",
     linkedin: "https://www.linkedin.com/in/kushjain7",
     contact_email: "partnership@edciitd.com",
     instagram: "https://instagram.com/__kush7__?igshid=ZDc4ODBmNjlmNQ==",
@@ -260,7 +260,7 @@ const coordis = [
   {
     firstname: "Harsh Kumar",
     lastname: "Singh",
-    post: "Outreach / Content Creation",
+    post: "Outreach / Content Creation Coordinator",
     linkedin: "https://www.linkedin.com/in/harsh-kumar-singh/",
     contact_email: "hkst2002@gmail.com",
     instagram: "www.instagram.com/harsh.k.singh",
