@@ -333,7 +333,7 @@ body {
   }
 }
 
-.social-media-links {
+/* .social-media-links {
   width: 100%;
   left: 0;
   bottom: 0;
@@ -356,7 +356,7 @@ body {
 .social-media:hover {
   opacity: 1;
   transform: scale(1.1);
-}
+} */
 
 .navigation-links {
   display: flex;
@@ -3215,12 +3215,12 @@ min-height: 100vh;
   background-color: transparent;
 } */
 #contact{
-background-color: #333; /* Dark background color */
+background-color: #c70039;; /* Dark background color */
  /* Shadow effect */
 padding: 20px; /* Add some padding to improve visual appearance */
 }
 #contact .section-header{
-  color: #89C4E1;
+  color: whitesmoke;
 }
 #contact .contact-info-becon {
   margin-bottom: 20px;
@@ -3237,7 +3237,7 @@ padding: 20px; /* Add some padding to improve visual appearance */
 #contact .contact-info-becon address,
 #contact .contact-info-becon p {
   margin-bottom: 0;
-  color:#89C4E1;
+  color:white;
 }
 
 #contact .contact-info-becon h3 {
@@ -3249,11 +3249,11 @@ padding: 20px; /* Add some padding to improve visual appearance */
 }
 
 #contact .contact-info-becon a {
-  color: #89C4E1;
+  color: white;
 }
 
 #contact .contact-info-becon a:hover {
-  color: #b8439a;
+  color: orange;
 }
 
 #contact .contact-address,
@@ -3285,7 +3285,7 @@ padding: 20px; /* Add some padding to improve visual appearance */
   background-color: rgb(55, 4, 55);
 } */
 #newsletter {
-  background-color: #333; /* Dark background color */
+  background-color: #c70039; /* Dark background color */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Shadow effect */
   padding: 20px; /* Add some padding to improve visual appearance */
 }
@@ -3298,7 +3298,7 @@ padding: 20px; /* Add some padding to improve visual appearance */
 
 #newsletter .form-control {
   background-color: transparent;
-  border: 1px solid #965e5e;
+  border: 1px solid white;
   border-radius: 0;
   color: #888;
   font-size: 11px;
@@ -3317,13 +3317,13 @@ padding: 20px; /* Add some padding to improve visual appearance */
 }
 
 #newsletter .form-control:focus {
-  border-color: #63a058;
+  border-color: greenyellow;
   box-shadow: none;
   outline: 0 none;
 }
 
 #newsletter .btn {
-  background: #75b657;
+  background: rgb(141, 204, 47);
   border: 0;
   border-radius: 0;
   height: 50px;
@@ -3376,9 +3376,34 @@ padding: 20px; /* Add some padding to improve visual appearance */
   background: #55b03f;
 }
 #newsletter h3{
-  color: #4c93c3;
+  color: whitesmoke;
 }
 #newsletter ul li i {
-  color: #3242a0;
+  color: white;
   line-height: 0;
+}
+.social-media-links {
+  background-color: #c70039;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: relative;
+  padding: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-media {
+  color: whitesmoke;
+  width: 21px;
+  opacity: 0.6;
+  margin: 8px;
+  transition: all 0.4s ease;
+}
+
+.social-media:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
