@@ -333,7 +333,7 @@ body {
   }
 }
 
-.social-media-links {
+/* .social-media-links {
   width: 100%;
   left: 0;
   bottom: 0;
@@ -356,7 +356,7 @@ body {
 .social-media:hover {
   opacity: 1;
   transform: scale(1.1);
-}
+} */
 
 .navigation-links {
   display: flex;
@@ -3201,4 +3201,209 @@ min-height: 100vh;
     padding-right: 2rem;
     padding-bottom: 3rem;
   }
+}
+
+
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+/* #contact {
+  padding: 60px 0;
+}
+#contact{
+  background-color: transparent;
+} */
+#contact{
+background-color: #c70039;; /* Dark background color */
+ /* Shadow effect */
+padding: 20px; /* Add some padding to improve visual appearance */
+}
+#contact .section-header{
+  color: whitesmoke;
+}
+#contact .contact-info-becon {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact .contact-info-becon i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color:white
+}
+
+#contact .contact-info-becon address,
+#contact .contact-info-becon p {
+  margin-bottom: 0;
+  color:white;
+}
+
+#contact .contact-info-becon h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FDA769;
+}
+
+#contact .contact-info-becon a {
+  color: white;
+}
+
+#contact .contact-info-becon a:hover {
+  color: orange;
+}
+
+#contact .contact-address,
+#contact .contact-phone,
+#contact .contact-email {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+
+  #contact .contact-address,
+  #contact .contact-phone,
+  #contact .contact-email {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+/* Newsletter Section
+--------------------------------*/
+/* #newsletter {
+  height: cover;
+  height: 200px;
+  background-color: rgb(55, 4, 55);
+} */
+#newsletter {
+  background-color: #c70039; /* Dark background color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Shadow effect */
+  padding: 20px; /* Add some padding to improve visual appearance */
+}
+
+#newsletter .overlay {
+  /* background: linear-gradient(rgba(240, 235, 235, 0.9) 0%, rgba(255, 255, 255, 0.2) 95%); */
+  height: 100%;
+  width: 100%;
+}
+
+#newsletter .form-control {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+  background: #cbcac9;
+}
+
+@media (max-width: 575px) {
+  #newsletter .form-control {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+#newsletter .form-control:focus {
+  border-color: greenyellow;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+#newsletter .btn {
+  background: rgb(141, 204, 47);
+  border: 0;
+  border-radius: 0;
+  height: 50px;
+  width: 30%;
+  transition: 0.3s;
+}
+
+@media (max-width: 575px) {
+  #newsletter .btn {
+    width: 100%;
+  }
+}
+
+#newsletter .btn:hover {
+  background: #187e25;
+}
+
+#newsletter .btn .fa {
+  padding-right: 10px;
+}
+
+#newsletter ul {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+#newsletter ul li {
+  background: #71c55d;
+  border-radius: 50px;
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 35px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newsletter ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newsletter ul li:hover {
+  background: #55b03f;
+}
+#newsletter h3{
+  color: whitesmoke;
+}
+#newsletter ul li i {
+  color: white;
+  line-height: 0;
+}
+.social-media-links {
+  background-color: #c70039;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: relative;
+  padding: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-media {
+  color: whitesmoke;
+  width: 21px;
+  opacity: 0.6;
+  margin: 8px;
+  transition: all 0.4s ease;
+}
+
+.social-media:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
