@@ -3118,6 +3118,7 @@ min-height: 100vh;
     position: fixed;
     z-index: 2;
     width: 100%;
+    
 }
 
 .navbarx {
@@ -3129,7 +3130,6 @@ min-height: 100vh;
     z-index: -1;
     padding: 10px 20px;
     width: 100%;
-
      /* Add a light shadow */
 }
 
@@ -3406,4 +3406,12 @@ padding: 20px; /* Add some padding to improve visual appearance */
 .social-media:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+#stay-updated-button{
+  transform: translateY(50px);
+}
+
+#main-page-event{
+  background-color: #080808;
 }
